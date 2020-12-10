@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	char s[100];
+	gets(s);
+	int c=0;
+	map<char,int> m;
+	for(int i=0;i<strlen(s);i++)
+	{
+		if(m.find(s[i])==m.end())
+		{
+			m[s[i]]=1;
+		}
+		else m[s[i]]++;
+	}
+	
+	map<char,int>::iterator it;
+	for(it=m.begin();it!=m.end();it++)
+		cout<<it->first<<" "<<it->second<<"\n";
+}
